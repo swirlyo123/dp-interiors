@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testimonial Slider with Loading Bars</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #fdfdf5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slider {
+            width: 400px;
+            padding: 20px;
+            background: #fdfdf5;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .stars, .quote {
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+
+        .stars {
+            color: #FFA07A;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .quote {
+            font-size: 16px;
+            color: #3d6156;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .progress-bars {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .bar {
+            width: 30px;
+            height: 4px;
+            background: #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            width: 0%;
+            background: #3d6156;
+            border-radius: 10px;
+            transition: width 3.5s linear;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div>
+        <div class="hero-intro">
+            <h1 class="framer-text">
+                <span >Your Ideas,</span>
+                <span><br>Our Creative</span>
+            </h1>
+        </div>
+    </div>
+    <div>
+        <div class="slider">
+            <div class="stars" id="stars">★★★★★</div>
+            <div class="quote" id="quote">Loading...</div>
+            <div class="progress-bars" id="progressBars"></div>
+        </div>
+        <div>
+            <p>From concept to completion, we bring your vision to life with precision and style.
+                Get in touch to explore how we can make it extraordinary.</p>
+            <div class="ssr-variant hidden-7hwwvd hidden-otwvw4">
+                <div class="bharth-1lhqrq6-container">
+                    <!--$-->
+                    <a class="bharth-GyAUS bharth-o2neY bharth-4k1ayz bharth-v-4k1ayz bharth-1jyfzbo" data-bharth-name="Variant 1" style="border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px" href="/projects.html">
+                        <div class="bharth-1xis4cv" style="background-color:#22A2AF;border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px">
+                            <div class="bharth-1whei7w" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:var(--token-ee524d9d-de64-451e-a22a-dec6a11245ce, rgb(255, 255, 255));--bharth-link-text-color:rgb(0, 153, 255);--bharth-link-text-decoration:underline;transform:none" data-bharth-component-type="RichTextContainer">
+                                <p class="bharth-text bharth-styles-preset-1vcau2" data-styles-preset="QMuEq11PS" style="--bharth-text-alignment:center;--bharth-text-color:var(--extracted-r6o4lv, var(--token-ee524d9d-de64-451e-a22a-dec6a11245ce, rgb(255, 255, 255)))">All Projects</p>
+                            </div>
+                        </div>
+                        <div class="bharth-owvjt7" style="background-color:var(--token-9f0badbf-8d74-41b8-a73a-e1a6bdec487b, rgb(243, 172, 133));border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px">
+                            <div class="bharth-lo95ja-container" style="transform:rotate(0deg)">
+                                <div style="display:contents"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.7876 4.04947L15.8489 9.11197C15.9011 9.16421 15.9426 9.22625 15.9709 9.29454C15.9992 9.36282 16.0138 9.43602 16.0138 9.50994C16.0138 9.58386 15.9992 9.65706 15.9709 9.72535C15.9426 9.79363 15.9011 9.85567 15.8489 9.90791L10.7876 14.9704C10.6821 15.076 10.5389 15.1353 10.3897 15.1353C10.2405 15.1353 10.0974 15.076 9.99183 14.9704C9.88631 14.8649 9.82702 14.7217 9.82702 14.5724C9.82702 14.4232 9.88631 14.28 9.99183 14.1745L14.0936 10.0724H3.07897C2.92982 10.0724 2.78678 10.0132 2.68131 9.90769C2.57585 9.8022 2.5166 9.65913 2.5166 9.50994C2.5166 9.36076 2.57585 9.21768 2.68131 9.11219C2.78678 9.0067 2.92982 8.94744 3.07897 8.94744H14.0936L9.99183 4.84541C9.88631 4.73986 9.82702 4.59671 9.82702 4.44744C9.82702 4.29817 9.88631 4.15502 9.99183 4.04947C10.0974 3.94392 10.2405 3.88463 10.3897 3.88463C10.5389 3.88463 10.6821 3.94392 10.7876 4.04947Z" fill="white"/>
+                                </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!--/$-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<script>
+    const testimonials = [
+        {
+            stars: '★★★★★',
+            text: 'I was skeptical about virtual design services but their e-design package was comprehensive and perfectly tailored to my needs. - Tony M.'
+        },
+        {
+            stars: '★★★★☆',
+            text: 'Great experience working with the team, highly recommend for online decor projects. - Sarah K.'
+        },
+        {
+            stars: '★★★★★',
+            text: 'Affordable, efficient, and beautiful results! Couldn’t have asked for more. - Daniel P.'
+        }
+    ];
+
+    const quoteEl = document.getElementById('quote');
+    const starsEl = document.getElementById('stars');
+    const progressBarsEl = document.getElementById('progressBars');
+
+    let currentIndex = 0;
+    const duration = 3500;
+
+    function renderProgressBars() {
+        progressBarsEl.innerHTML = '';
+        testimonials.forEach((_, i) => {
+            const bar = document.createElement('div');
+            bar.classList.add('bar');
+            const fill = document.createElement('div');
+            fill.classList.add('bar-fill');
+            if (i === currentIndex) {
+                fill.style.width = '100%';
+            }
+            bar.appendChild(fill);
+            progressBarsEl.appendChild(bar);
+        });
+    }
+
+    function resetBars() {
+        const fills = document.querySelectorAll('.bar-fill');
+        fills.forEach((fill, i) => {
+            fill.style.transition = 'none';
+            fill.style.width = '0%';
+            if (i === currentIndex) {
+                setTimeout(() => {
+                    fill.style.transition = `width ${duration}ms linear`;
+                    fill.style.width = '100%';
+                }, 50);
+            }
+        });
+    }
+
+    function showTestimonial() {
+        starsEl.classList.remove('visible');
+        quoteEl.classList.remove('visible');
+
+        setTimeout(() => {
+            const current = testimonials[currentIndex];
+            starsEl.textContent = current.stars;
+            quoteEl.textContent = current.text;
+            starsEl.classList.add('visible');
+            quoteEl.classList.add('visible');
+            renderProgressBars();
+            resetBars();
+        }, 300);
+    }
+
+    function nextTestimonial() {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        showTestimonial();
+    }
+
+    renderProgressBars();
+    showTestimonial();
+    setInterval(nextTestimonial, duration);
+</script>
+
+</body>
+</html>
