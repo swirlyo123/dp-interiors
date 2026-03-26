@@ -9960,6 +9960,19 @@
                 pointer-events: none
             }
         </style>
+        <style>
+            /* Quote+Footer section responsive */
+            #quote-form { width: 100% !important; }
+            #quote-form .qf-inner { display:flex; gap:64px; flex-wrap:wrap; align-items:flex-start; padding:80px 40px 60px; }
+            #quote-form .qf-footer { border-top:1px solid rgba(255,255,255,0.1); padding:36px 40px 0; }
+            #quote-form .qf-footer-row { display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; margin-bottom:28px; }
+            #quote-form .qf-copyright { border-top:1px solid rgba(255,255,255,0.1); padding:18px 0; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; }
+            @media (max-width: 768px) {
+                #quote-form .qf-inner { padding:48px 20px 40px; gap:40px; }
+                #quote-form .qf-footer { padding:28px 20px 0; }
+                #quote-form .qf-form-card { padding:24px 20px !important; }
+            }
+        </style>
         <!-- Start of headEnd -->
         <!-- End of headEnd -->
     </head>
@@ -14924,10 +14937,10 @@
                 <div class="bharth-1bn53kh-container"></div>
                 
                 <!-- Combined Contact + Footer -->
-                <section id="quote-form" style="background:rgb(0,77,139);font-family:'Inter',sans-serif;color:#fff;">
+                <section id="quote-form" style="background:rgb(0,77,139);font-family:'Inter',sans-serif;color:#fff;width:100%;align-self:stretch;box-sizing:border-box;">
 
                   <!-- CTA + Form row -->
-                  <div style="padding:80px 40px 60px;">
+                  <div class="qf-inner">
                     <div style="display:flex;gap:64px;flex-wrap:wrap;align-items:flex-start;">
 
                       <!-- LEFT: Headline + trust points + contact -->
@@ -14976,7 +14989,7 @@
                       </div>
 
                       <!-- RIGHT: Form card -->
-                      <div style="flex:1.1;min-width:300px;background:#fff;border-radius:16px;padding:36px 32px;">
+                      <div class="qf-form-card" style="flex:1.1;min-width:300px;background:#fff;border-radius:16px;padding:36px 32px;">
                         <h3 style="font-size:17px;font-weight:700;color:rgb(0,77,139);margin:0 0 6px;letter-spacing:-0.02em;">Request a Free Quote</h3>
                         <p style="font-size:13px;color:rgba(0,0,0,0.45);margin:0 0 24px;">We'll respond within 24 hours.</p>
                         <form action="https://formsubmit.co/dnpinteriorsweb@gmail.com" method="POST" style="display:flex;flex-direction:column;gap:12px;">
@@ -15005,9 +15018,9 @@
                   </div>
 
                   <!-- Footer bar inside same section -->
-                  <div style="border-top:1px solid rgba(255,255,255,0.1);padding:36px 40px 0;">
+                  <div class="qf-footer">
                     <div>
-                      <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;margin-bottom:28px;">
+                      <div class="qf-footer-row">
                         <!-- Brand -->
                         <div style="flex:1.5;min-width:200px;">
                           <div style="font-size:18px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px;">D&amp;P Interiors</div>
@@ -15053,7 +15066,7 @@
                         </div>
                       </div>
                       <!-- Bottom copyright bar -->
-                      <div style="border-top:1px solid rgba(255,255,255,0.1);padding:18px 0;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;">
+                      <div class="qf-copyright">
                         <p style="font-size:12px;opacity:0.35;margin:0;">&#169; 2025 D&amp;P Interiors. All rights reserved.</p>
                         <p style="font-size:12px;opacity:0.35;margin:0;">Mon&#8211;Sat: 9 AM &#8211; 7 PM &nbsp;|&nbsp; Sun: Closed</p>
                       </div>
