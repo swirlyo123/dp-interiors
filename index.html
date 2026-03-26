@@ -85,6 +85,15 @@
                 opacity: 0;
                 transition: opacity 0.3s ease-in;
             }
+            /* Fix address text overlap */
+            .bharth-text.ip { word-break: break-word !important; overflow-wrap: break-word !important; white-space: normal !important; }
+            /* Fix review cards - remove bottom image area */
+            .review-product-image-container { display: none !important; }
+            /* Fix reviewer info overlap */
+            .reviewer-info { position: relative !important; display: flex; flex-direction: column; justify-content: center; }
+            .bottom-svg, .top-svg { display: none !important; }
+            /* Fix OFFICE label color */
+            p[style*="rgb(255, 0, 0)"] { color: rgba(255,255,255,0.5) !important; --bharth-text-color: rgba(255,255,255,0.5) !important; }
 
             .count-number.animated {
                 opacity: 1;
