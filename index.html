@@ -18188,6 +18188,36 @@
 
 </script>
 
+<script>
+    document.querySelectorAll('form[action*="formsubmit.co"]').forEach(function(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var data = new FormData(form);
+            var obj = {};
+            data.forEach(function(val, key) {
+                if (!key.startsWith('_')) obj[key] = val;
+            });
+            fetch('https://formsubmit.co/ajax/dnpinteriorsweb@gmail.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(obj)
+            })
+            .then(function() {
+                form.innerHTML = '<div style="text-align:center;padding:40px 20px;font-family:Inter,sans-serif;color:#004D8B;">' +
+                    '<div style="font-size:48px;margin-bottom:16px;">✓</div>' +
+                    '<div style="font-size:22px;font-weight:600;margin-bottom:8px;">Message Received!</div>' +
+                    '<div style="font-size:15px;opacity:0.8;">Thank you for reaching out. We\'ll get back to you within 24 hours.</div>' +
+                    '</div>';
+            })
+            .catch(function() {
+                form.innerHTML = '<div style="text-align:center;padding:40px 20px;font-family:Inter,sans-serif;color:#cc0000;">' +
+                    '<div style="font-size:15px;">Something went wrong. Please email us directly at <a href="mailto:dnpinteriorsweb@gmail.com">dnpinteriorsweb@gmail.com</a></div>' +
+                    '</div>';
+            });
+        });
+    });
+</script>
+
     </body>
 </html>
 
