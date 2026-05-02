@@ -119,6 +119,13 @@
             transition: transform 0.5s ease;
         }
         .bento-item:hover img { transform: scale(1.03); }
+        /* p11 uni-seoul-church-street is a small square image — show full without crop */
+        .bento-grid .bento-item:nth-child(11) {
+            background: #e8e8e4;
+        }
+        .bento-grid .bento-item:nth-child(11) img {
+            object-fit: contain;
+        }
 
         /* Explicit landscape-only bento placement */
         /* Row 1: big + small */
