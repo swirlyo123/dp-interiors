@@ -94,17 +94,69 @@
                 letter-spacing: -8px;
             }
         }
-        .projects-section {
-            margin: 0 auto;
-            padding: 40px 20px 120px 20px;
+        /* Bento Gallery */
+        .bento-gallery {
+            padding: 40px 16px 80px;
+            background: rgb(248,248,245);
         }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 280px;
+            gap: 10px;
         }
+        .bento-item {
+            border-radius: 12px;
+            overflow: hidden;
+            background: #ddd;
+        }
+        .bento-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .bento-item:hover img { transform: scale(1.03); }
+
+        /* Explicit landscape-only bento placement */
+        /* Row 1: big + small */
+        .bento-grid .bento-item:nth-child(1)  { grid-column: 1 / 9;  grid-row: 1; } /* p01 wide */
+        .bento-grid .bento-item:nth-child(2)  { grid-column: 9 / 13; grid-row: 1; } /* p02 normal */
+        /* Row 2: three equal */
+        .bento-grid .bento-item:nth-child(3)  { grid-column: 1 / 5;  grid-row: 2; }
+        .bento-grid .bento-item:nth-child(4)  { grid-column: 5 / 9;  grid-row: 2; }
+        .bento-grid .bento-item:nth-child(5)  { grid-column: 9 / 13; grid-row: 2; }
+        /* Row 3: wide + normal */
+        .bento-grid .bento-item:nth-child(6)  { grid-column: 1 / 9;  grid-row: 3; } /* p06 very wide */
+        .bento-grid .bento-item:nth-child(7)  { grid-column: 9 / 13; grid-row: 3; }
+        /* Row 4: normal + wide */
+        .bento-grid .bento-item:nth-child(8)  { grid-column: 1 / 5;  grid-row: 4; }
+        .bento-grid .bento-item:nth-child(9)  { grid-column: 5 / 13; grid-row: 4; } /* p09 very wide */
+        /* Row 5: two halves */
+        .bento-grid .bento-item:nth-child(10) { grid-column: 1 / 7;  grid-row: 5; }
+        .bento-grid .bento-item:nth-child(11) { grid-column: 7 / 13; grid-row: 5; }
+        /* Row 6: normal + wide */
+        .bento-grid .bento-item:nth-child(12) { grid-column: 1 / 5;  grid-row: 6; }
+        .bento-grid .bento-item:nth-child(13) { grid-column: 5 / 13; grid-row: 6; }
+
+        /* Mobile: single column, natural image height */
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: none;
+                grid-auto-rows: auto;
+            }
+            .bento-grid .bento-item:nth-child(n) {
+                grid-column: 1 / 2;
+                grid-row: auto;
+                height: 260px;
+            }
+        }
+
+        /* Keep old selectors to avoid breaking anything */
+        .projects-section { display:none; }
         .tab {
             padding: 12px 28px;
             border: 2px solid #004d8b;
@@ -5735,17 +5787,50 @@
 <!--                    </div>-->
 
 
-                <div class="projects-section">
-                    <div class="tabs">
-                        <button class="tab active" data-tab="tab-all">All</button>
-                        <button class="tab" data-tab="tab-retail">Retail</button>
-                        <button class="tab" data-tab="tab-commercial">Commercial</button>
+                <!-- Bento Grid Gallery -->
+                <section class="bento-gallery">
+                  <div class="bento-grid">
+                    <div class="bento-item bento-big">
+                      <img src="./images/projects/p01-10-club-forum-south-mall.avif" alt="Project" loading="lazy">
                     </div>
-
-                    <div class="tab-content active" id="tab-all"></div>
-                    <div class="tab-content" id="tab-retail"></div>
-                    <div class="tab-content" id="tab-commercial"></div>
-                </div>
+                    <div class="bento-item bento-normal">
+                      <img src="./images/projects/p02-bewakoof-hsr-layout-bengaluru.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-tall">
+                      <img src="./images/projects/p03-bewakoof-forum-south-mall-bengaluru.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-wide">
+                      <img src="./images/projects/p04-new-me-phoenix-mall-indore.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-normal">
+                      <img src="./images/projects/p05-newme-infinity-mall-mumbai.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-normal">
+                      <img src="./images/projects/p06-newme-infinity-mall-mumbai.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-tall">
+                      <img src="./images/projects/p07-the-rack-the-stretch-bengaluru.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-wide">
+                      <img src="./images/projects/p08-the-stretch-bengaluru.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-normal">
+                      <img src="./images/projects/p09-tigc-bengaluru.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-big">
+                      <img src="./images/projects/p10-tigc-the-stretch-bengaluru.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-tall">
+                      <img src="./images/projects/p11-uni-seoul-church-street-bengaluru.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-normal">
+                      <img src="./images/projects/p12-uniseoul-forum-south-mall-bengaluru.avif" alt="Project" loading="lazy">
+                    </div>
+                    <div class="bento-item bento-wide">
+                      <img src="./images/projects/p13-uniseoul-m5-mall-bengaluru.avif" alt="Project" loading="lazy">
+                    </div>
+                  </div>
+                </section>
 
 
 
@@ -5999,84 +6084,7 @@
 
 
 
-    const tabs = document.querySelectorAll(".tab");
-    const contents = document.querySelectorAll(".tab-content");
-
-    const retailProjects = [
-        "W", "Wrogn", "IMARA", "Breya", "FabAlley", "Mulmul", "Zalza Teens", "Ego Activewear",
-        "Tynimo", "Titan World", "Swiss Time House", "RADO", "TISSOT", "CASIO", "OnePlus",
-        "Coolcurves", "Freez It", "Portronics"
-    ];
-
-    const commercialProjects = [
-        "Dental Clinic", "Namma Gubbi", "Eastman Exports"
-    ];
-
-    const hoverPhrases = [
-        "View Details", "Check Portfolio", "Explore Brand", "Discover More", "See Showcase"
-    ];
-
-    function getRandomHover() {
-        return hoverPhrases[Math.floor(Math.random() * hoverPhrases.length)];
-    }
-
-    function getRandomImage(seed) {
-        return `https://picsum.photos/seed/${seed}/365/395`;
-    }
-
-    function generateProjectHTML(type, name) {
-        return `
-        <div class="project-item">
-          <div class="image-container">
-            <img src="${getRandomImage(name)}" alt="${name}" />
-            <div class="hover-overlay">
-              <span class="hover-text">${getRandomHover()}</span>
-            </div>
-            <div class="info-row">
-               <div class="top-svg" style="width: 100%; height: 100%; aspect-ratio: inherit;"><svg style="width:100%;height:100%"><use href="#svg11772428212"></use></svg></div>
-
-              <div class="category-container">${type}</div>
-
-              <div class="bottom-svg" style="width: 100%; height: 100%; aspect-ratio: inherit;"><svg style="width:100%;height:100%"><use href="#svg11772428212"></use></svg></div>
-            </div>
-            <div class="image-mask"></div>
-          </div>
-          <div class="project-name">
-            <span class="arrow-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="#003366">
-                <path d="M213.66,181.66l-48,48a8,8,0,0,1-11.32-11.32L188.69,184H64a8,8,0,0,1-8-8V32a8,8,0,0,1,16,0V168H188.69l-34.35-34.34a8,8,0,0,1,11.32-11.32l48,48A8,8,0,0,1,213.66,181.66Z"/>
-              </svg>
-            </span>
-            <span class="project-text">${name}</span>
-          </div>
-        </div>`;
-    }
-
-    function renderTab(tabId, projectList) {
-        const container = document.getElementById(tabId);
-        container.innerHTML = projectList.map(p => generateProjectHTML(p.type, p.name)).join('');
-    }
-
-    const allProjects = [
-        ...retailProjects.map(name => ({ type: "Retail", name })),
-        ...commercialProjects.map(name => ({ type: "Commercial", name }))
-    ];
-
-    const retailOnly = allProjects.filter(p => p.type === "Retail");
-    const commercialOnly = allProjects.filter(p => p.type === "Commercial");
-
-    renderTab("tab-all", allProjects);
-    renderTab("tab-retail", retailOnly);
-    renderTab("tab-commercial", commercialOnly);
-
-    tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            tabs.forEach(t => t.classList.remove("active"));
-            contents.forEach(c => c.classList.remove("active"));
-            tab.classList.add("active");
-            document.getElementById(tab.getAttribute("data-tab")).classList.add("active");
-        });
-    });
+    // Tab/project JS removed — replaced with static bento grid
 
 
 
