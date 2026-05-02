@@ -119,13 +119,7 @@
             transition: transform 0.5s ease;
         }
         .bento-item:hover img { transform: scale(1.03); }
-        /* p11 uni-seoul-church-street is a small square image — show full without crop */
-        .bento-grid .bento-item:nth-child(11) {
-            background: #e8e8e4;
-        }
-        .bento-grid .bento-item:nth-child(11) img {
-            object-fit: contain;
-        }
+
 
         /* Explicit landscape-only bento placement */
         /* Row 1: big + small */
@@ -144,9 +138,8 @@
         /* Row 5: two halves */
         .bento-grid .bento-item:nth-child(10) { grid-column: 1 / 7;  grid-row: 5; }
         .bento-grid .bento-item:nth-child(11) { grid-column: 7 / 13; grid-row: 5; }
-        /* Row 6: normal + wide */
-        .bento-grid .bento-item:nth-child(12) { grid-column: 1 / 5;  grid-row: 6; }
-        .bento-grid .bento-item:nth-child(13) { grid-column: 5 / 13; grid-row: 6; }
+        /* Row 6: full width */
+        .bento-grid .bento-item:nth-child(12) { grid-column: 1 / 13; grid-row: 6; }
 
         /* Mobile: single column, natural image height */
         @media (max-width: 768px) {
@@ -5826,9 +5819,6 @@
                     </div>
                     <div class="bento-item bento-big">
                       <img src="./images/projects/p10-tigc-the-stretch-bengaluru.avif" alt="Project" loading="lazy">
-                    </div>
-                    <div class="bento-item bento-tall">
-                      <img src="./images/projects/p11-uni-seoul-church-street-bengaluru.avif" alt="Project" loading="lazy">
                     </div>
                     <div class="bento-item bento-normal">
                       <img src="./images/projects/p12-uniseoul-forum-south-mall-bengaluru.avif" alt="Project" loading="lazy">
