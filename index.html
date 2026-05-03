@@ -82,7 +82,7 @@
 
 
             .count-number {
-                opacity: 0;
+                opacity: 1;
                 transition: opacity 0.3s ease-in;
             }
             /* Fix address text overlap */
@@ -16229,7 +16229,7 @@
                 }
             });
         }, {
-            threshold: 0.6 // start animating when 60% visible
+            threshold: 0.1 // start animating when 10% visible
         });
 
         counters.forEach(counter => {
