@@ -10775,25 +10775,22 @@
                             </div>
                         </div>
                     </section>
-                    <section class="bharth-wvumy1 sec dp-scrollstack-section" data-bharth-name="Section - Projects" name="Section - Projects">
+                    <section class="dp-ss-outer" data-bharth-name="Section - Projects" name="Section - Projects">
 <style>
-/* Override Bharth layout that breaks sticky */
-.dp-scrollstack-section {
-    position:relative !important;
-    display:block !important;
-    padding:0 !important;
-    background:#fff !important;
-    overflow:visible !important;
+.dp-ss-outer {
+    display:block;
+    position:relative;
+    background:#fff;
+    width:100%;
 }
-.dp-scrollstack-sticky {
-    position:absolute;
-    top:0; left:0; right:0;
+.dp-ss-panel {
+    position:sticky;
+    top:0;
     height:100vh;
     overflow:hidden;
     background:#fff;
-    /* translateY set by JS to fake sticky */
 }
-.dp-scrollstack-header {
+.dp-ss-header {
     position:absolute;
     top:0; left:0; right:0;
     padding:clamp(24px,3.5vw,44px) clamp(24px,5vw,64px);
@@ -10801,11 +10798,11 @@
     align-items:center;
     justify-content:space-between;
     z-index:50;
-    background:linear-gradient(to bottom, #fff 50%, transparent);
+    background:linear-gradient(to bottom,#fff 55%,transparent);
     pointer-events:none;
 }
-.dp-scrollstack-header a { pointer-events:auto; }
-.dp-scrollstack-title {
+.dp-ss-header a { pointer-events:auto; }
+.dp-ss-title {
     font-family:'Clash Display','Clash Display Placeholder',sans-serif;
     font-size:clamp(30px,4vw,54px);
     font-weight:500;
@@ -10814,7 +10811,7 @@
     letter-spacing:-0.03em;
     line-height:1;
 }
-.dp-scrollstack-viewall {
+.dp-ss-viewall {
     font-family:'Inter','Inter Placeholder',sans-serif;
     font-size:14px;
     font-weight:500;
@@ -10826,8 +10823,8 @@
     transition:opacity 0.2s;
     white-space:nowrap;
 }
-.dp-scrollstack-viewall:hover { opacity:1; }
-.dp-scrollstack-stage {
+.dp-ss-viewall:hover { opacity:1; }
+.dp-ss-stage {
     position:absolute;
     inset:0;
     display:flex;
@@ -10837,13 +10834,13 @@
 .dp-ss-card {
     position:absolute;
     left:50%; top:50%;
-    width:min(82vw,980px);
+    width:min(80vw,960px);
     aspect-ratio:16/10;
     border-radius:18px;
     overflow:hidden;
     will-change:transform,opacity;
     box-shadow:0 12px 56px rgba(0,0,0,0.16);
-    transform:translate(-50%, calc(-50% + 110vh));
+    transform:translate(-50%,calc(-50% + 110vh));
     opacity:0;
 }
 .dp-ss-card img {
@@ -10851,11 +10848,11 @@
     object-fit:cover; object-position:center;
     display:block; pointer-events:none;
 }
-.dp-ss-card-label {
+.dp-ss-label {
     position:absolute;
     bottom:0; left:0; right:0;
     padding:clamp(14px,2vw,24px) clamp(16px,2.5vw,32px);
-    background:linear-gradient(to top,rgba(0,0,0,0.72) 0%,transparent 100%);
+    background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 100%);
     font-family:'Clash Display','Clash Display Placeholder',sans-serif;
     font-size:clamp(15px,1.8vw,24px);
     font-weight:500;
@@ -10866,78 +10863,74 @@
     .dp-ss-card { width:92vw; border-radius:14px; }
 }
 </style>
-<div class="dp-scrollstack-sticky" id="dpSSSticky">
-    <div class="dp-scrollstack-header">
-        <h2 class="dp-scrollstack-title">Our Work</h2>
-        <a href="/projects.html" class="dp-scrollstack-viewall">View all projects</a>
+<div class="dp-ss-panel">
+    <div class="dp-ss-header">
+        <h2 class="dp-ss-title">Our Work</h2>
+        <a href="/projects.html" class="dp-ss-viewall">View all projects</a>
     </div>
-    <div class="dp-scrollstack-stage">
-        <div class="dp-ss-card"><img src="./images/projects/furlenco.jpg" alt="Furlenco fit-out" loading="eager"><div class="dp-ss-card-label">Furlenco</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/jsw-one-home-studio.jpg" alt="JSW One Home Studio" loading="lazy"><div class="dp-ss-card-label">JSW One Home Studio</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p01-10-club-forum-south-mall.avif" alt="10Club fit-out" loading="lazy"><div class="dp-ss-card-label">10Club</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/rimzim.jpg" alt="Rimzim Dadu fit-out" loading="lazy"><div class="dp-ss-card-label">Rimzim Dadu</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p10-tigc-the-stretch-bengaluru.avif" alt="TIGC fit-out" loading="lazy"><div class="dp-ss-card-label">TIGC</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/sureena.jpg" alt="Sureena Chowdhri fit-out" loading="lazy"><div class="dp-ss-card-label">Sureena Chowdhri</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/uspl.jpg" alt="USPL fit-out" loading="lazy"><div class="dp-ss-card-label">USPL</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p07-the-rack-the-stretch-bengaluru.avif" alt="The Rack fit-out" loading="lazy"><div class="dp-ss-card-label">The Rack</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p08-the-stretch-bengaluru.avif" alt="The Stretch fit-out" loading="lazy"><div class="dp-ss-card-label">The Stretch</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p03-bewakoof-forum-south-mall-bengaluru.avif" alt="Bewakoof fit-out" loading="lazy"><div class="dp-ss-card-label">Bewakoof</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p05-newme-infinity-mall-mumbai.avif" alt="New Me fit-out" loading="lazy"><div class="dp-ss-card-label">New Me</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/mulmul.jpg" alt="Mulmul fit-out" loading="lazy"><div class="dp-ss-card-label">Mulmul</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/wrogn.jpg" alt="Wrogn fit-out" loading="lazy"><div class="dp-ss-card-label">Wrogn</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/damensch.jpg" alt="DaMENSCH fit-out" loading="lazy"><div class="dp-ss-card-label">DaMENSCH</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/lite-store.jpg" alt="Lite Store fit-out" loading="lazy"><div class="dp-ss-card-label">Lite Store</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/oppo.jpg" alt="OPPO fit-out" loading="lazy"><div class="dp-ss-card-label">OPPO</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/w-brand.jpg" alt="W fit-out" loading="lazy"><div class="dp-ss-card-label">W</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/joker-and-witch.jpg" alt="Joker and Witch fit-out" loading="lazy"><div class="dp-ss-card-label">Joker &amp; Witch</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/nobero.jpg" alt="Nobero fit-out" loading="lazy"><div class="dp-ss-card-label">Nobero</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/bear-house.jpg" alt="Bear House fit-out" loading="lazy"><div class="dp-ss-card-label">Bear House</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/mokobara.jpg" alt="Mokobara fit-out" loading="lazy"><div class="dp-ss-card-label">Mokobara</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p12-uniseoul-forum-south-mall-bengaluru.avif" alt="Uni Seoul fit-out" loading="lazy"><div class="dp-ss-card-label">Uni Seoul</div></div>
+    <div class="dp-ss-stage" id="dpSSStage">
+        <div class="dp-ss-card"><img src="./images/projects/furlenco.jpg" alt="Furlenco" loading="eager"><div class="dp-ss-label">Furlenco</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/jsw-one-home-studio.jpg" alt="JSW One Home Studio" loading="lazy"><div class="dp-ss-label">JSW One Home Studio</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p01-10-club-forum-south-mall.avif" alt="10Club" loading="lazy"><div class="dp-ss-label">10Club</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/rimzim.jpg" alt="Rimzim Dadu" loading="lazy"><div class="dp-ss-label">Rimzim Dadu</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p10-tigc-the-stretch-bengaluru.avif" alt="TIGC" loading="lazy"><div class="dp-ss-label">TIGC</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/sureena.jpg" alt="Sureena Chowdhri" loading="lazy"><div class="dp-ss-label">Sureena Chowdhri</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/uspl.jpg" alt="USPL" loading="lazy"><div class="dp-ss-label">USPL</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p07-the-rack-the-stretch-bengaluru.avif" alt="The Rack" loading="lazy"><div class="dp-ss-label">The Rack</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p08-the-stretch-bengaluru.avif" alt="The Stretch" loading="lazy"><div class="dp-ss-label">The Stretch</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p03-bewakoof-forum-south-mall-bengaluru.avif" alt="Bewakoof" loading="lazy"><div class="dp-ss-label">Bewakoof</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p05-newme-infinity-mall-mumbai.avif" alt="New Me" loading="lazy"><div class="dp-ss-label">New Me</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/mulmul.jpg" alt="Mulmul" loading="lazy"><div class="dp-ss-label">Mulmul</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/wrogn.jpg" alt="Wrogn" loading="lazy"><div class="dp-ss-label">Wrogn</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/damensch.jpg" alt="DaMENSCH" loading="lazy"><div class="dp-ss-label">DaMENSCH</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/lite-store.jpg" alt="Lite Store" loading="lazy"><div class="dp-ss-label">Lite Store</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/oppo.jpg" alt="OPPO" loading="lazy"><div class="dp-ss-label">OPPO</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/w-brand.jpg" alt="W" loading="lazy"><div class="dp-ss-label">W</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/joker-and-witch.jpg" alt="Joker and Witch" loading="lazy"><div class="dp-ss-label">Joker &amp; Witch</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/nobero.jpg" alt="Nobero" loading="lazy"><div class="dp-ss-label">Nobero</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/bear-house.jpg" alt="Bear House" loading="lazy"><div class="dp-ss-label">Bear House</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/mokobara.jpg" alt="Mokobara" loading="lazy"><div class="dp-ss-label">Mokobara</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p12-uniseoul-forum-south-mall-bengaluru.avif" alt="Uni Seoul" loading="lazy"><div class="dp-ss-label">Uni Seoul</div></div>
     </div>
 </div>
 <script>
 (function(){
-    var section=document.querySelector('.dp-scrollstack-section');
-    var sticky=document.getElementById('dpSSSticky');
+    var outer=document.querySelector('.dp-ss-outer');
     var cards=Array.from(document.querySelectorAll('.dp-ss-card'));
     var N=cards.length;
     var STEP=0,rafId=null;
 
     function setHeight(){
-        STEP=window.innerHeight*(window.innerWidth<768?0.32:0.46);
-        section.style.height=(N*STEP+window.innerHeight)+'px';
+        /* Each card after the first gets its own scroll step.
+           First card is visible on entry so we only need N-1 extra steps. */
+        STEP=window.innerHeight*(window.innerWidth<768?0.28:0.38);
+        outer.style.height=((N-1)*STEP+window.innerHeight)+'px';
     }
 
     function update(){
         rafId=null;
-        var rect=section.getBoundingClientRect();
+        var rect=outer.getBoundingClientRect();
         var scrolledIn=-rect.top;
-        var scrollRange=section.offsetHeight-window.innerHeight;
+        if(scrolledIn<-window.innerHeight||scrolledIn>outer.offsetHeight+window.innerHeight)return;
 
-        /* JS-driven sticky: translate panel by scroll amount to pin it */
-        var ty=Math.max(0,Math.min(scrollRange,scrolledIn));
-        sticky.style.transform='translateY('+ty+'px)';
-
-        if(scrolledIn<-window.innerHeight||scrolledIn>scrollRange+window.innerHeight)return;
-
+        /* progress=0 → first card centred; progress=1 → second card arrives; etc. */
         var progress=Math.max(0,scrolledIn)/STEP;
 
         cards.forEach(function(card,i){
-            var p=Math.max(0,Math.min(1,progress-i));
-            var depth=Math.max(0,progress-i-1);
-            var tyCard,scale,opacity;
+            /* offset by 1 so card 0 is fully on screen at progress=0 */
+            var p=Math.max(0,Math.min(1,progress-i+1));
+            var depth=Math.max(0,progress-i);
 
+            var tyCard,scale,opacity;
             if(p<=0){
                 tyCard=110;scale=1;opacity=0;
             } else {
                 var arrY=(1-p)*110;
-                var stackY=-Math.min(depth*2.2,13.2);
+                var stackY=-Math.min(depth*2.4,14.4);
                 tyCard=arrY+stackY;
                 scale=Math.max(0.80,1-depth*0.03);
-                opacity=depth>=7?0:Math.min(1,p*2.5);
+                opacity=depth>=7?0:Math.min(1,p*3);
             }
-
             card.style.transform='translate(-50%,calc(-50% + '+tyCard+'vh)) scale('+scale+')';
             card.style.opacity=opacity;
             card.style.zIndex=i+1;
