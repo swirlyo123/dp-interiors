@@ -945,18 +945,17 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                object-position: center center;
                 display: block;
+                transform: scale(1);
                 transition: transform 0.5s ease;
             }
-            /* Furlenco: wide store — show mid-section of the floor */
-            .dp-hero-img-main img { object-position: center 38%; }
-            /* USPL: zoom in slightly to center */
-            .dp-hero-img-2 img { object-position: center center; transform: scale(1.09); }
-            /* Mokobara: gentle zoom, keep entire storefront centered */
-            .dp-hero-img-3 img { object-position: center center; transform: scale(1.06); }
-            .dp-hero-img-main:hover img { transform: scale(1.03); }
-            .dp-hero-img-2:hover img    { transform: scale(1.12); }
-            .dp-hero-img-3:hover img    { transform: scale(1.09); }
+            .dp-hero-img-main img { object-position: center 40%; }
+            .dp-hero-img-2 img    { object-position: center 45%; }
+            .dp-hero-img-3 img    { object-position: center 35%; }
+            .dp-hero-img-main:hover img,
+            .dp-hero-img-2:hover img,
+            .dp-hero-img-3:hover img { transform: scale(1.04); }
             /* Tablet */
             @media (max-width: 980px) {
                 .dp-hero {
