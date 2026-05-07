@@ -10775,200 +10775,169 @@
                             </div>
                         </div>
                     </section>
-                    <section class="bharth-wvumy1 sec" data-bharth-name="Section - Projects" name="Section - Projects" style="background:#fff;overflow:hidden;padding-bottom:64px;">
+                    <section class="bharth-wvumy1 sec dp-scrollstack-section" data-bharth-name="Section - Projects" name="Section - Projects" style="background:#fff;">
 <style>
-.dp-portfolio-gallery{position:relative;width:100%;height:min(72vh,660px);overflow:hidden;user-select:none;cursor:grab;}
-.dp-portfolio-gallery:active{cursor:grabbing;}
-.dp-portfolio-card{position:absolute;left:50%;top:50%;width:min(65vw,820px);height:calc(100% - 40px);border-radius:20px;overflow:hidden;will-change:transform,opacity;transition:transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94),opacity 0.55s ease;}
-.dp-portfolio-card img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;}
-.dp-card-overlay{position:absolute;bottom:0;left:0;right:0;height:55%;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:28px 32px;}
-.dp-card-brand{font-family:'Clash Display','Clash Display Placeholder',sans-serif;font-size:28px;font-weight:500;color:#fff;letter-spacing:-0.02em;line-height:1.1;}
-.dp-gallery-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.92);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.15);transition:background 0.2s,transform 0.2s;z-index:30;}
-.dp-gallery-nav:hover{background:#fff;transform:translateY(-50%) scale(1.08);}
-#dpPortfolioPrev{left:max(20px,calc(50% - min(32.5vw,410px) - 72px));}
-#dpPortfolioNext{right:max(20px,calc(50% - min(32.5vw,410px) - 72px));}
-.dp-gallery-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font-family:'Inter','Inter Placeholder',sans-serif;font-size:13px;font-weight:500;color:#fff;background:rgba(0,0,0,0.42);backdrop-filter:blur(8px);padding:6px 16px;border-radius:20px;z-index:30;letter-spacing:0.06em;}
-.dp-gallery-dots{display:flex;gap:6px;justify-content:center;padding:20px 0 0;flex-wrap:wrap;max-width:400px;margin:0 auto;}
-.dp-gallery-dot{width:6px;height:6px;border-radius:50%;background:#141414;opacity:0.18;border:none;padding:0;cursor:pointer;transition:opacity 0.3s,width 0.3s,border-radius 0.3s;}
-.dp-gallery-dot.dp-dot-active{opacity:1;width:20px;border-radius:3px;background:#22A2AF;}
+.dp-scrollstack-section { position:relative; }
+.dp-scrollstack-sticky {
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow:hidden;
+    background:#fff;
+}
+.dp-scrollstack-header {
+    position:absolute;
+    top:0; left:0; right:0;
+    padding:clamp(24px,3.5vw,44px) clamp(24px,5vw,64px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:50;
+    background:linear-gradient(to bottom, #fff 50%, transparent);
+    pointer-events:none;
+}
+.dp-scrollstack-header a { pointer-events:auto; }
+.dp-scrollstack-title {
+    font-family:'Clash Display','Clash Display Placeholder',sans-serif;
+    font-size:clamp(30px,4vw,54px);
+    font-weight:500;
+    color:#141414;
+    margin:0;
+    letter-spacing:-0.03em;
+    line-height:1;
+}
+.dp-scrollstack-viewall {
+    font-family:'Inter','Inter Placeholder',sans-serif;
+    font-size:14px;
+    font-weight:500;
+    color:#141414;
+    text-decoration:none;
+    border-bottom:1px solid rgba(20,20,20,0.3);
+    padding-bottom:2px;
+    opacity:0.5;
+    transition:opacity 0.2s;
+    white-space:nowrap;
+}
+.dp-scrollstack-viewall:hover { opacity:1; }
+.dp-scrollstack-stage {
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.dp-ss-card {
+    position:absolute;
+    left:50%; top:50%;
+    width:min(82vw, 980px);
+    aspect-ratio:16/10;
+    border-radius:18px;
+    overflow:hidden;
+    will-change:transform,opacity;
+    box-shadow:0 12px 56px rgba(0,0,0,0.16);
+    transform:translate(-50%, calc(-50% + 110vh));
+    opacity:0;
+}
+.dp-ss-card img {
+    width:100%; height:100%;
+    object-fit:cover; object-position:center;
+    display:block; pointer-events:none;
+}
+.dp-ss-card-label {
+    position:absolute;
+    bottom:0; left:0; right:0;
+    padding:clamp(14px,2vw,24px) clamp(16px,2.5vw,32px);
+    background:linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+    font-family:'Clash Display','Clash Display Placeholder',sans-serif;
+    font-size:clamp(15px,1.8vw,24px);
+    font-weight:500;
+    color:#fff;
+    letter-spacing:-0.02em;
+}
 @media(max-width:768px){
-.dp-portfolio-card{width:88vw;border-radius:14px;}
-.dp-card-brand{font-size:20px;}
-.dp-card-overlay{padding:20px 22px;}
-#dpPortfolioPrev{left:12px;}
-#dpPortfolioNext{right:12px;}
+    .dp-ss-card { width:92vw; border-radius:14px; }
 }
 </style>
-<div style="max-width:1280px;margin:0 auto;padding:72px 40px 36px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;">
-    <div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0.90625C5.79477 0.90625 4.61661 1.26364 3.6145 1.93323C2.61238 2.60282 1.83133 3.55454 1.37011 4.66802C0.90889 5.78151 0.788214 7.00676 1.02334 8.18883C1.25847 9.3709 1.83884 10.4567 2.69107 11.3089C3.5433 12.1612 4.6291 12.7415 5.81117 12.9767C6.99324 13.2118 8.21849 13.0911 9.33198 12.6299C10.4455 12.1687 11.3972 11.3876 12.0668 10.3855C12.7364 9.38339 13.0938 8.20523 13.0938 7C13.092 5.38436 12.4495 3.83538 11.307 2.69295C10.1646 1.55052 8.61564 0.907956 7 0.90625ZM7 12.1562C5.98019 12.1562 4.98328 11.8538 4.13534 11.2873C3.2874 10.7207 2.62651 9.91539 2.23625 8.97321C1.84598 8.03103 1.74387 6.99428 1.94283 5.99407C2.14178 4.99385 2.63287 4.0751 3.35398 3.35398C4.0751 2.63287 4.99385 2.14178 5.99407 1.94283C6.99428 1.74387 8.03103 1.84598 8.97321 2.23625C9.9154 2.62651 10.7207 3.2874 11.2873 4.13534C11.8538 4.98328 12.1563 5.98019 12.1563 7C12.1547 8.36705 11.611 9.67766 10.6443 10.6443C9.67766 11.611 8.36705 12.1547 7 12.1562Z" fill="#22A2AF"/><path d="M7 11.2188C9.32995 11.2188 11.2188 9.32995 11.2188 7C11.2188 4.67005 9.32995 2.78125 7 2.78125C4.67005 2.78125 2.78125 4.67005 2.78125 7C2.78125 9.32995 4.67005 11.2188 7 11.2188Z" fill="#22A2AF"/></svg>
-            <span style="font-family:'Inter','Inter Placeholder',sans-serif;font-size:13px;font-weight:500;color:#141414;letter-spacing:0.01em;">Our Portfolio</span>
-        </div>
-        <h2 style="font-family:'Clash Display','Clash Display Placeholder',sans-serif;font-size:clamp(36px,4vw,60px);font-weight:500;color:#141414;margin:0;line-height:1.05;letter-spacing:-0.03em;">Our Work</h2>
+<div class="dp-scrollstack-sticky" id="dpSSSticky">
+    <div class="dp-scrollstack-header">
+        <h2 class="dp-scrollstack-title">Our Work</h2>
+        <a href="/projects.html" class="dp-scrollstack-viewall">View all projects</a>
     </div>
-    <a href="/projects.html" style="display:inline-flex;align-items:center;gap:10px;background:#22A2AF;color:#fff;font-family:'Inter','Inter Placeholder',sans-serif;font-size:15px;font-weight:500;padding:14px 26px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:opacity 0.2s;" onmouseenter="this.style.opacity='0.85'" onmouseleave="this.style.opacity='1'">View All Projects <svg width="16" height="16" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.7876 4.04947L15.8489 9.11197C15.9011 9.16421 15.9426 9.22625 15.9709 9.29454C15.9992 9.36282 16.0138 9.43602 16.0138 9.50994C16.0138 9.58386 15.9992 9.65706 15.9709 9.72535C15.9426 9.79363 15.9011 9.85567 15.8489 9.90791L10.7876 14.9704C10.6821 15.076 10.5389 15.1353 10.3897 15.1353C10.2405 15.1353 10.0974 15.076 9.99183 14.9704C9.88631 14.8649 9.82702 14.7217 9.82702 14.5724C9.82702 14.4232 9.88631 14.28 9.99183 14.1745L14.0936 10.0724H3.07897C2.92982 10.0724 2.78678 10.0132 2.68131 9.90769C2.57585 9.8022 2.5166 9.65913 2.5166 9.50994C2.5166 9.36076 2.57585 9.21768 2.68131 9.11219C2.78678 9.0067 2.92982 8.94744 3.07897 8.94744H14.0936L9.99183 4.84541C9.88631 4.73986 9.82702 4.59671 9.82702 4.44744C9.82702 4.29817 9.88631 4.15502 9.99183 4.04947C10.0974 3.94392 10.2405 3.88463 10.3897 3.88463C10.5389 3.88463 10.6821 3.94392 10.7876 4.04947Z" fill="white"/></svg></a>
-</div>
-<div id="dpPortfolioGallery" class="dp-portfolio-gallery">
-    <div class="dp-portfolio-card" data-index="0" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/furlenco.jpg" alt="Furlenco store fit-out" loading="eager">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Furlenco</div></div>
+    <div class="dp-scrollstack-stage">
+        <div class="dp-ss-card"><img src="./images/projects/furlenco.jpg" alt="Furlenco fit-out" loading="eager"><div class="dp-ss-card-label">Furlenco</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/jsw-one-home-studio.jpg" alt="JSW One Home Studio fit-out" loading="lazy"><div class="dp-ss-card-label">JSW One Home Studio</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p01-10-club-forum-south-mall.avif" alt="10Club fit-out" loading="lazy"><div class="dp-ss-card-label">10Club</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/rimzim.jpg" alt="Rimzim Dadu fit-out" loading="lazy"><div class="dp-ss-card-label">Rimzim Dadu</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p10-tigc-the-stretch-bengaluru.avif" alt="TIGC fit-out" loading="lazy"><div class="dp-ss-card-label">TIGC</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/sureena.jpg" alt="Sureena Chowdhri fit-out" loading="lazy"><div class="dp-ss-card-label">Sureena Chowdhri</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/uspl.jpg" alt="USPL fit-out" loading="lazy"><div class="dp-ss-card-label">USPL</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p07-the-rack-the-stretch-bengaluru.avif" alt="The Rack fit-out" loading="lazy"><div class="dp-ss-card-label">The Rack</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p08-the-stretch-bengaluru.avif" alt="The Stretch fit-out" loading="lazy"><div class="dp-ss-card-label">The Stretch</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p03-bewakoof-forum-south-mall-bengaluru.avif" alt="Bewakoof fit-out" loading="lazy"><div class="dp-ss-card-label">Bewakoof</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p05-newme-infinity-mall-mumbai.avif" alt="New Me fit-out" loading="lazy"><div class="dp-ss-card-label">New Me</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/mulmul.jpg" alt="Mulmul fit-out" loading="lazy"><div class="dp-ss-card-label">Mulmul</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/wrogn.jpg" alt="Wrogn fit-out" loading="lazy"><div class="dp-ss-card-label">Wrogn</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/damensch.jpg" alt="DaMENSCH fit-out" loading="lazy"><div class="dp-ss-card-label">DaMENSCH</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/lite-store.jpg" alt="Lite Store fit-out" loading="lazy"><div class="dp-ss-card-label">Lite Store</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/oppo.jpg" alt="OPPO fit-out" loading="lazy"><div class="dp-ss-card-label">OPPO</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/w-brand.jpg" alt="W fit-out" loading="lazy"><div class="dp-ss-card-label">W</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/joker-and-witch.jpg" alt="Joker and Witch fit-out" loading="lazy"><div class="dp-ss-card-label">Joker &amp; Witch</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/nobero.jpg" alt="Nobero fit-out" loading="lazy"><div class="dp-ss-card-label">Nobero</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/bear-house.jpg" alt="Bear House fit-out" loading="lazy"><div class="dp-ss-card-label">Bear House</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/mokobara.jpg" alt="Mokobara fit-out" loading="lazy"><div class="dp-ss-card-label">Mokobara</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p12-uniseoul-forum-south-mall-bengaluru.avif" alt="Uni Seoul fit-out" loading="lazy"><div class="dp-ss-card-label">Uni Seoul</div></div>
     </div>
-    <div class="dp-portfolio-card" data-index="1" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/jsw-one-home-studio.jpg" alt="JSW One Home Studio fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">JSW One Home Studio</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="2" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/p01-10-club-forum-south-mall.avif" alt="10Club store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">10Club</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="3" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/rimzim.jpg" alt="Rimzim Dadu store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Rimzim Dadu</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="4" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/p10-tigc-the-stretch-bengaluru.avif" alt="TIGC store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">TIGC</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="5" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/sureena.jpg" alt="Sureena Chowdhri store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Sureena Chowdhri</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="6" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/uspl.jpg" alt="USPL store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">USPL</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="7" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/p07-the-rack-the-stretch-bengaluru.avif" alt="The Rack store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">The Rack</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="8" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/p08-the-stretch-bengaluru.avif" alt="The Stretch store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">The Stretch</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="9" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/p03-bewakoof-forum-south-mall-bengaluru.avif" alt="Bewakoof store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Bewakoof</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="10" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/p05-newme-infinity-mall-mumbai.avif" alt="New Me store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">New Me</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="11" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/mulmul.jpg" alt="Mulmul store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Mulmul</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="12" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/wrogn.jpg" alt="Wrogn store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Wrogn</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="13" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/damensch.jpg" alt="DaMENSCH store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">DaMENSCH</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="14" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/lite-store.jpg" alt="Lite Store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Lite Store</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="15" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/oppo.jpg" alt="OPPO store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">OPPO</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="16" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/w-brand.jpg" alt="W store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">W</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="17" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/joker-and-witch.jpg" alt="Joker &amp; Witch store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Joker &amp; Witch</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="18" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/nobero.jpg" alt="Nobero store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Nobero</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="19" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/bear-house.jpg" alt="Bear House store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Bear House</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="20" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/mokobara.jpg" alt="Mokobara store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Mokobara</div></div>
-    </div>
-    <div class="dp-portfolio-card" data-index="21" style="opacity:0;transform:translate(-50%,-50%);">
-        <img src="./images/projects/p12-uniseoul-forum-south-mall-bengaluru.avif" alt="Uni Seoul store fit-out" loading="lazy">
-        <div class="dp-card-overlay"><div class="dp-card-brand">Uni Seoul</div></div>
-    </div>
-    <button id="dpPortfolioPrev" class="dp-gallery-nav" aria-label="Previous project">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <button id="dpPortfolioNext" class="dp-gallery-nav" aria-label="Next project">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6L15 12L9 18" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <div id="dpPortfolioCounter" class="dp-gallery-counter">01 / 22</div>
-</div>
-<div class="dp-gallery-dots" id="dpPortfolioDots">
-    <button class="dp-gallery-dot dp-dot-active" aria-label="Go to project 1"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 2"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 3"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 4"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 5"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 6"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 7"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 8"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 9"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 10"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 11"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 12"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 13"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 14"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 15"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 16"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 17"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 18"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 19"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 20"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 21"></button>
-    <button class="dp-gallery-dot" aria-label="Go to project 22"></button>
 </div>
 <script>
 (function(){
-    var gallery=document.getElementById('dpPortfolioGallery');
-    var cards=Array.from(document.querySelectorAll('.dp-portfolio-card'));
-    var dots=Array.from(document.querySelectorAll('.dp-gallery-dot'));
-    var counter=document.getElementById('dpPortfolioCounter');
-    var current=0;
-    var total=cards.length;
-    var startX=0;
-    var isDragging=false;
-    function pad(n){return(n<10?'0':'')+n;}
-    function updateGallery(){
-        cards.forEach(function(card,i){
-            var offset=i-current;
-            var absOffset=Math.abs(offset);
-            var tx=offset*68;
-            var scale=1-absOffset*0.075;
-            var opacity=absOffset===0?1:absOffset===1?0.68:0;
-            var zIndex=20-absOffset*5;
-            card.style.transform='translate(-50%,-50%) translateX('+tx+'vw) scale('+scale+')';
-            card.style.opacity=opacity;
-            card.style.zIndex=zIndex;
-            card.style.pointerEvents=absOffset===0?'auto':'none';
-        });
-        dots.forEach(function(d,i){
-            if(i===current){d.classList.add('dp-dot-active');}else{d.classList.remove('dp-dot-active');}
-        });
-        counter.textContent=pad(current+1)+' / '+pad(total);
+    var section=document.querySelector('.dp-scrollstack-section');
+    var cards=Array.from(document.querySelectorAll('.dp-ss-card'));
+    var N=cards.length;
+    var STEP=0;
+    var rafId=null;
+
+    function setHeight(){
+        STEP=window.innerHeight*(window.innerWidth<768?0.32:0.46);
+        section.style.height=(N*STEP+window.innerHeight)+'px';
     }
-    function goTo(idx){current=Math.max(0,Math.min(total-1,idx));updateGallery();}
-    document.getElementById('dpPortfolioPrev').addEventListener('click',function(){goTo(current-1);});
-    document.getElementById('dpPortfolioNext').addEventListener('click',function(){goTo(current+1);});
-    dots.forEach(function(dot,i){dot.addEventListener('click',function(){goTo(i);});});
-    gallery.addEventListener('touchstart',function(e){startX=e.touches[0].clientX;},{passive:true});
-    gallery.addEventListener('touchend',function(e){var delta=e.changedTouches[0].clientX-startX;if(Math.abs(delta)>40){goTo(current+(delta<0?1:-1));}});
-    gallery.addEventListener('mousedown',function(e){startX=e.clientX;isDragging=true;e.preventDefault();});
-    window.addEventListener('mouseup',function(e){if(!isDragging)return;isDragging=false;var delta=e.clientX-startX;if(Math.abs(delta)>40){goTo(current+(delta<0?1:-1));}});
-    document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')goTo(current-1);if(e.key==='ArrowRight')goTo(current+1);});
-    updateGallery();
+
+    function update(){
+        rafId=null;
+        var rect=section.getBoundingClientRect();
+        var scrolledIn=-rect.top;
+        if(scrolledIn<-window.innerHeight||scrolledIn>section.offsetHeight)return;
+        var progress=scrolledIn/STEP;
+
+        cards.forEach(function(card,i){
+            var p=Math.max(0,Math.min(1,progress-i));
+            var depth=Math.max(0,progress-i-1);
+            var ty,scale,opacity;
+
+            if(p<=0){
+                ty=110; scale=1; opacity=0;
+            } else {
+                var arrY=(1-p)*110;
+                var stackY=-Math.min(depth*2.2,13.2);
+                ty=arrY+stackY;
+                scale=Math.max(0.80,1-depth*0.03);
+                opacity=depth>=7?0:Math.min(1,p*2.5);
+            }
+
+            card.style.transform='translate(-50%, calc(-50% + '+ty+'vh)) scale('+scale+')';
+            card.style.opacity=opacity;
+            card.style.zIndex=i+1;
+        });
+    }
+
+    function onScroll(){
+        if(rafId)return;
+        rafId=requestAnimationFrame(update);
+    }
+
+    setHeight();
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',function(){setHeight();update();});
+    update();
 })();
 </script>
                     </section>
