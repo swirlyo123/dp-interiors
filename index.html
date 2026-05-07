@@ -10387,6 +10387,177 @@
                         </div>
                     </section>
                     
+                    <section class="dp-ss-outer" data-bharth-name="Section - Projects" name="Section - Projects">
+<style>
+.dp-ss-outer {
+    display:block;
+    position:relative;
+    background:#fff;
+    width:100%;
+}
+.dp-ss-panel {
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow:hidden;
+    background:#fff;
+}
+.dp-ss-header {
+    position:absolute;
+    top:0; left:0; right:0;
+    padding:clamp(24px,3.5vw,44px) clamp(24px,5vw,64px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:50;
+    background:linear-gradient(to bottom,#fff 55%,transparent);
+    pointer-events:none;
+}
+.dp-ss-header a { pointer-events:auto; }
+.dp-ss-title {
+    font-family:'Clash Display','Clash Display Placeholder',sans-serif;
+    font-size:clamp(30px,4vw,54px);
+    font-weight:500;
+    color:#141414;
+    margin:0;
+    letter-spacing:-0.03em;
+    line-height:1;
+}
+.dp-ss-viewall {
+    font-family:'Inter','Inter Placeholder',sans-serif;
+    font-size:14px;
+    font-weight:500;
+    color:#141414;
+    text-decoration:none;
+    border-bottom:1px solid rgba(20,20,20,0.3);
+    padding-bottom:2px;
+    opacity:0.5;
+    transition:opacity 0.2s;
+    white-space:nowrap;
+}
+.dp-ss-viewall:hover { opacity:1; }
+.dp-ss-stage {
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.dp-ss-card {
+    position:absolute;
+    left:50%; top:50%;
+    width:min(80vw,960px);
+    aspect-ratio:16/10;
+    border-radius:18px;
+    overflow:hidden;
+    will-change:transform,opacity;
+    box-shadow:0 12px 56px rgba(0,0,0,0.16);
+    transform:translate(-50%,calc(-50% + 110vh));
+    opacity:0;
+}
+.dp-ss-card img {
+    width:100%; height:100%;
+    object-fit:cover; object-position:center;
+    display:block; pointer-events:none;
+}
+.dp-ss-label {
+    position:absolute;
+    bottom:0; left:0; right:0;
+    padding:clamp(14px,2vw,24px) clamp(16px,2.5vw,32px);
+    background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 100%);
+    font-family:'Clash Display','Clash Display Placeholder',sans-serif;
+    font-size:clamp(15px,1.8vw,24px);
+    font-weight:500;
+    color:#fff;
+    letter-spacing:-0.02em;
+}
+@media(max-width:768px){
+    .dp-ss-card { width:92vw; border-radius:14px; }
+}
+</style>
+<div class="dp-ss-panel">
+    <div class="dp-ss-header">
+        <h2 class="dp-ss-title">Our Work</h2>
+        <a href="/projects.html" class="dp-ss-viewall">View all projects</a>
+    </div>
+    <div class="dp-ss-stage" id="dpSSStage">
+        <div class="dp-ss-card"><img src="./images/projects/furlenco.jpg" alt="Furlenco" loading="eager"><div class="dp-ss-label">Furlenco</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/jsw-one-home-studio.jpg" alt="JSW One Home Studio" loading="lazy"><div class="dp-ss-label">JSW One Home Studio</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p01-10-club-forum-south-mall.avif" alt="10Club" loading="lazy"><div class="dp-ss-label">10Club</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/rimzim.jpg" alt="Rimzim Dadu" loading="lazy"><div class="dp-ss-label">Rimzim Dadu</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p10-tigc-the-stretch-bengaluru.avif" alt="TIGC" loading="lazy"><div class="dp-ss-label">TIGC</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/sureena.jpg" alt="Sureena Chowdhri" loading="lazy"><div class="dp-ss-label">Sureena Chowdhri</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/uspl.jpg" alt="USPL" loading="lazy"><div class="dp-ss-label">USPL</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p07-the-rack-the-stretch-bengaluru.avif" alt="The Rack" loading="lazy"><div class="dp-ss-label">The Rack</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p08-the-stretch-bengaluru.avif" alt="The Stretch" loading="lazy"><div class="dp-ss-label">The Stretch</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p03-bewakoof-forum-south-mall-bengaluru.avif" alt="Bewakoof" loading="lazy"><div class="dp-ss-label">Bewakoof</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p05-newme-infinity-mall-mumbai.avif" alt="New Me" loading="lazy"><div class="dp-ss-label">New Me</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/mulmul.jpg" alt="Mulmul" loading="lazy"><div class="dp-ss-label">Mulmul</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/wrogn.jpg" alt="Wrogn" loading="lazy"><div class="dp-ss-label">Wrogn</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/damensch.jpg" alt="DaMENSCH" loading="lazy"><div class="dp-ss-label">DaMENSCH</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/lite-store.jpg" alt="Lite Store" loading="lazy"><div class="dp-ss-label">Lite Store</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/oppo.jpg" alt="OPPO" loading="lazy"><div class="dp-ss-label">OPPO</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/w-brand.jpg" alt="W" loading="lazy"><div class="dp-ss-label">W</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/joker-and-witch.jpg" alt="Joker and Witch" loading="lazy"><div class="dp-ss-label">Joker &amp; Witch</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/nobero.jpg" alt="Nobero" loading="lazy"><div class="dp-ss-label">Nobero</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/bear-house.jpg" alt="Bear House" loading="lazy"><div class="dp-ss-label">Bear House</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/mokobara.jpg" alt="Mokobara" loading="lazy"><div class="dp-ss-label">Mokobara</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/p12-uniseoul-forum-south-mall-bengaluru.avif" alt="Uni Seoul" loading="lazy"><div class="dp-ss-label">Uni Seoul</div></div>
+    </div>
+</div>
+<script>
+(function(){
+    var outer=document.querySelector('.dp-ss-outer');
+    var cards=Array.from(document.querySelectorAll('.dp-ss-card'));
+    var N=cards.length;
+    var STEP=0,rafId=null;
+
+    function setHeight(){
+        /* Each card after the first gets its own scroll step.
+           First card is visible on entry so we only need N-1 extra steps. */
+        STEP=window.innerHeight*(window.innerWidth<768?0.28:0.38);
+        outer.style.height=((N-1)*STEP+window.innerHeight)+'px';
+    }
+
+    function update(){
+        rafId=null;
+        var rect=outer.getBoundingClientRect();
+        var scrolledIn=-rect.top;
+        if(scrolledIn<-window.innerHeight||scrolledIn>outer.offsetHeight+window.innerHeight)return;
+
+        /* progress=0 → first card centred; progress=1 → second card arrives; etc. */
+        var progress=Math.max(0,scrolledIn)/STEP;
+
+        cards.forEach(function(card,i){
+            /* offset by 1 so card 0 is fully on screen at progress=0 */
+            var p=Math.max(0,Math.min(1,progress-i+1));
+            var depth=Math.max(0,progress-i);
+
+            var tyCard,scale,opacity;
+            if(p<=0){
+                tyCard=110;scale=1;opacity=0;
+            } else {
+                var arrY=(1-p)*110;
+                var stackY=-Math.min(depth*2.4,14.4);
+                tyCard=arrY+stackY;
+                scale=Math.max(0.80,1-depth*0.03);
+                opacity=depth>=7?0:Math.min(1,p*3);
+            }
+            card.style.transform='translate(-50%,calc(-50% + '+tyCard+'vh)) scale('+scale+')';
+            card.style.opacity=opacity;
+            card.style.zIndex=i+1;
+        });
+    }
+
+    function onScroll(){if(rafId)return;rafId=requestAnimationFrame(update);}
+
+    setHeight();
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',function(){setHeight();update();});
+    update();
+})();
+</script>
+                    </section>
                     <section class="bharth-13gsh6" data-bharth-name="Section - About" name="Section - About">
                         <div class="bharth-nycbxd" data-bharth-name="Container" name="Container">
                             <div class="bharth-d437s5" data-bharth-name="Top Content" name="Top Content">
@@ -10774,177 +10945,6 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section class="dp-ss-outer" data-bharth-name="Section - Projects" name="Section - Projects">
-<style>
-.dp-ss-outer {
-    display:block;
-    position:relative;
-    background:#fff;
-    width:100%;
-}
-.dp-ss-panel {
-    position:sticky;
-    top:0;
-    height:100vh;
-    overflow:hidden;
-    background:#fff;
-}
-.dp-ss-header {
-    position:absolute;
-    top:0; left:0; right:0;
-    padding:clamp(24px,3.5vw,44px) clamp(24px,5vw,64px);
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    z-index:50;
-    background:linear-gradient(to bottom,#fff 55%,transparent);
-    pointer-events:none;
-}
-.dp-ss-header a { pointer-events:auto; }
-.dp-ss-title {
-    font-family:'Clash Display','Clash Display Placeholder',sans-serif;
-    font-size:clamp(30px,4vw,54px);
-    font-weight:500;
-    color:#141414;
-    margin:0;
-    letter-spacing:-0.03em;
-    line-height:1;
-}
-.dp-ss-viewall {
-    font-family:'Inter','Inter Placeholder',sans-serif;
-    font-size:14px;
-    font-weight:500;
-    color:#141414;
-    text-decoration:none;
-    border-bottom:1px solid rgba(20,20,20,0.3);
-    padding-bottom:2px;
-    opacity:0.5;
-    transition:opacity 0.2s;
-    white-space:nowrap;
-}
-.dp-ss-viewall:hover { opacity:1; }
-.dp-ss-stage {
-    position:absolute;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-.dp-ss-card {
-    position:absolute;
-    left:50%; top:50%;
-    width:min(80vw,960px);
-    aspect-ratio:16/10;
-    border-radius:18px;
-    overflow:hidden;
-    will-change:transform,opacity;
-    box-shadow:0 12px 56px rgba(0,0,0,0.16);
-    transform:translate(-50%,calc(-50% + 110vh));
-    opacity:0;
-}
-.dp-ss-card img {
-    width:100%; height:100%;
-    object-fit:cover; object-position:center;
-    display:block; pointer-events:none;
-}
-.dp-ss-label {
-    position:absolute;
-    bottom:0; left:0; right:0;
-    padding:clamp(14px,2vw,24px) clamp(16px,2.5vw,32px);
-    background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 100%);
-    font-family:'Clash Display','Clash Display Placeholder',sans-serif;
-    font-size:clamp(15px,1.8vw,24px);
-    font-weight:500;
-    color:#fff;
-    letter-spacing:-0.02em;
-}
-@media(max-width:768px){
-    .dp-ss-card { width:92vw; border-radius:14px; }
-}
-</style>
-<div class="dp-ss-panel">
-    <div class="dp-ss-header">
-        <h2 class="dp-ss-title">Our Work</h2>
-        <a href="/projects.html" class="dp-ss-viewall">View all projects</a>
-    </div>
-    <div class="dp-ss-stage" id="dpSSStage">
-        <div class="dp-ss-card"><img src="./images/projects/furlenco.jpg" alt="Furlenco" loading="eager"><div class="dp-ss-label">Furlenco</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/jsw-one-home-studio.jpg" alt="JSW One Home Studio" loading="lazy"><div class="dp-ss-label">JSW One Home Studio</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p01-10-club-forum-south-mall.avif" alt="10Club" loading="lazy"><div class="dp-ss-label">10Club</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/rimzim.jpg" alt="Rimzim Dadu" loading="lazy"><div class="dp-ss-label">Rimzim Dadu</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p10-tigc-the-stretch-bengaluru.avif" alt="TIGC" loading="lazy"><div class="dp-ss-label">TIGC</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/sureena.jpg" alt="Sureena Chowdhri" loading="lazy"><div class="dp-ss-label">Sureena Chowdhri</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/uspl.jpg" alt="USPL" loading="lazy"><div class="dp-ss-label">USPL</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p07-the-rack-the-stretch-bengaluru.avif" alt="The Rack" loading="lazy"><div class="dp-ss-label">The Rack</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p08-the-stretch-bengaluru.avif" alt="The Stretch" loading="lazy"><div class="dp-ss-label">The Stretch</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p03-bewakoof-forum-south-mall-bengaluru.avif" alt="Bewakoof" loading="lazy"><div class="dp-ss-label">Bewakoof</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p05-newme-infinity-mall-mumbai.avif" alt="New Me" loading="lazy"><div class="dp-ss-label">New Me</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/mulmul.jpg" alt="Mulmul" loading="lazy"><div class="dp-ss-label">Mulmul</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/wrogn.jpg" alt="Wrogn" loading="lazy"><div class="dp-ss-label">Wrogn</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/damensch.jpg" alt="DaMENSCH" loading="lazy"><div class="dp-ss-label">DaMENSCH</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/lite-store.jpg" alt="Lite Store" loading="lazy"><div class="dp-ss-label">Lite Store</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/oppo.jpg" alt="OPPO" loading="lazy"><div class="dp-ss-label">OPPO</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/w-brand.jpg" alt="W" loading="lazy"><div class="dp-ss-label">W</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/joker-and-witch.jpg" alt="Joker and Witch" loading="lazy"><div class="dp-ss-label">Joker &amp; Witch</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/nobero.jpg" alt="Nobero" loading="lazy"><div class="dp-ss-label">Nobero</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/bear-house.jpg" alt="Bear House" loading="lazy"><div class="dp-ss-label">Bear House</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/mokobara.jpg" alt="Mokobara" loading="lazy"><div class="dp-ss-label">Mokobara</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/p12-uniseoul-forum-south-mall-bengaluru.avif" alt="Uni Seoul" loading="lazy"><div class="dp-ss-label">Uni Seoul</div></div>
-    </div>
-</div>
-<script>
-(function(){
-    var outer=document.querySelector('.dp-ss-outer');
-    var cards=Array.from(document.querySelectorAll('.dp-ss-card'));
-    var N=cards.length;
-    var STEP=0,rafId=null;
-
-    function setHeight(){
-        /* Each card after the first gets its own scroll step.
-           First card is visible on entry so we only need N-1 extra steps. */
-        STEP=window.innerHeight*(window.innerWidth<768?0.28:0.38);
-        outer.style.height=((N-1)*STEP+window.innerHeight)+'px';
-    }
-
-    function update(){
-        rafId=null;
-        var rect=outer.getBoundingClientRect();
-        var scrolledIn=-rect.top;
-        if(scrolledIn<-window.innerHeight||scrolledIn>outer.offsetHeight+window.innerHeight)return;
-
-        /* progress=0 → first card centred; progress=1 → second card arrives; etc. */
-        var progress=Math.max(0,scrolledIn)/STEP;
-
-        cards.forEach(function(card,i){
-            /* offset by 1 so card 0 is fully on screen at progress=0 */
-            var p=Math.max(0,Math.min(1,progress-i+1));
-            var depth=Math.max(0,progress-i);
-
-            var tyCard,scale,opacity;
-            if(p<=0){
-                tyCard=110;scale=1;opacity=0;
-            } else {
-                var arrY=(1-p)*110;
-                var stackY=-Math.min(depth*2.4,14.4);
-                tyCard=arrY+stackY;
-                scale=Math.max(0.80,1-depth*0.03);
-                opacity=depth>=7?0:Math.min(1,p*3);
-            }
-            card.style.transform='translate(-50%,calc(-50% + '+tyCard+'vh)) scale('+scale+')';
-            card.style.opacity=opacity;
-            card.style.zIndex=i+1;
-        });
-    }
-
-    function onScroll(){if(rafId)return;rafId=requestAnimationFrame(update);}
-
-    setHeight();
-    window.addEventListener('scroll',onScroll,{passive:true});
-    window.addEventListener('resize',function(){setHeight();update();});
-    update();
-})();
-</script>
                     </section>
                                         <section class="bharth-vacmzj gallery-b" data-bharth-name="Section - Gallery" id="gallery-scroll"  name="Section - Gallery">
                     <div class="video-block">
