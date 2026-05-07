@@ -948,11 +948,15 @@
                 display: block;
                 transition: transform 0.5s ease;
             }
-            .dp-hero-img-main:hover img,
-            .dp-hero-img-2:hover img,
-            .dp-hero-img-3:hover img {
-                transform: scale(1.03);
-            }
+            /* Furlenco: wide store — show mid-section of the floor */
+            .dp-hero-img-main img { object-position: center 38%; }
+            /* USPL: zoom in slightly to center */
+            .dp-hero-img-2 img { object-position: center center; transform: scale(1.09); }
+            /* Mokobara: gentle zoom, keep entire storefront centered */
+            .dp-hero-img-3 img { object-position: center center; transform: scale(1.06); }
+            .dp-hero-img-main:hover img { transform: scale(1.03); }
+            .dp-hero-img-2:hover img    { transform: scale(1.12); }
+            .dp-hero-img-3:hover img    { transform: scale(1.09); }
             /* Tablet */
             @media (max-width: 980px) {
                 .dp-hero {
@@ -10280,13 +10284,13 @@
                             <!-- Right: 3-image grid -->
                             <div class="dp-hero-right">
                                 <div class="dp-hero-img-main">
-                                    <img src="./images/projects/furlenco.jpg" alt="Furlenco retail store interior fit-out by D&P Interiors" loading="eager">
+                                    <img src="./images/projects/furlenco.jpg" alt="Furlenco retail store fit-out by D&P Interiors" loading="eager">
                                 </div>
                                 <div class="dp-hero-img-2">
-                                    <img src="./images/projects/sureena.jpg" alt="Sureena store interior designed by D&P Interiors" loading="lazy">
+                                    <img src="./images/projects/uspl.jpg" alt="USPL retail store designed by D&P Interiors" loading="lazy">
                                 </div>
                                 <div class="dp-hero-img-3">
-                                    <img src="./images/projects/rimzim.jpg" alt="Rim Zim retail fit-out by D&P Interiors" loading="lazy">
+                                    <img src="./images/projects/mokobara.jpg" alt="Mokobara flagship store by D&P Interiors" loading="lazy">
                                 </div>
                             </div>
                         </div>
