@@ -10775,15 +10775,23 @@
                             </div>
                         </div>
                     </section>
-                    <section class="bharth-wvumy1 sec dp-scrollstack-section" data-bharth-name="Section - Projects" name="Section - Projects" style="background:#fff;">
+                    <section class="bharth-wvumy1 sec dp-scrollstack-section" data-bharth-name="Section - Projects" name="Section - Projects">
 <style>
-.dp-scrollstack-section { position:relative; }
+/* Override Bharth layout that breaks sticky */
+.dp-scrollstack-section {
+    position:relative !important;
+    display:block !important;
+    padding:0 !important;
+    background:#fff !important;
+    overflow:visible !important;
+}
 .dp-scrollstack-sticky {
-    position:sticky;
-    top:0;
+    position:absolute;
+    top:0; left:0; right:0;
     height:100vh;
     overflow:hidden;
     background:#fff;
+    /* translateY set by JS to fake sticky */
 }
 .dp-scrollstack-header {
     position:absolute;
@@ -10829,7 +10837,7 @@
 .dp-ss-card {
     position:absolute;
     left:50%; top:50%;
-    width:min(82vw, 980px);
+    width:min(82vw,980px);
     aspect-ratio:16/10;
     border-radius:18px;
     overflow:hidden;
@@ -10847,7 +10855,7 @@
     position:absolute;
     bottom:0; left:0; right:0;
     padding:clamp(14px,2vw,24px) clamp(16px,2.5vw,32px);
-    background:linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+    background:linear-gradient(to top,rgba(0,0,0,0.72) 0%,transparent 100%);
     font-family:'Clash Display','Clash Display Placeholder',sans-serif;
     font-size:clamp(15px,1.8vw,24px);
     font-weight:500;
@@ -10865,7 +10873,7 @@
     </div>
     <div class="dp-scrollstack-stage">
         <div class="dp-ss-card"><img src="./images/projects/furlenco.jpg" alt="Furlenco fit-out" loading="eager"><div class="dp-ss-card-label">Furlenco</div></div>
-        <div class="dp-ss-card"><img src="./images/projects/jsw-one-home-studio.jpg" alt="JSW One Home Studio fit-out" loading="lazy"><div class="dp-ss-card-label">JSW One Home Studio</div></div>
+        <div class="dp-ss-card"><img src="./images/projects/jsw-one-home-studio.jpg" alt="JSW One Home Studio" loading="lazy"><div class="dp-ss-card-label">JSW One Home Studio</div></div>
         <div class="dp-ss-card"><img src="./images/projects/p01-10-club-forum-south-mall.avif" alt="10Club fit-out" loading="lazy"><div class="dp-ss-card-label">10Club</div></div>
         <div class="dp-ss-card"><img src="./images/projects/rimzim.jpg" alt="Rimzim Dadu fit-out" loading="lazy"><div class="dp-ss-card-label">Rimzim Dadu</div></div>
         <div class="dp-ss-card"><img src="./images/projects/p10-tigc-the-stretch-bengaluru.avif" alt="TIGC fit-out" loading="lazy"><div class="dp-ss-card-label">TIGC</div></div>
@@ -10891,10 +10899,10 @@
 <script>
 (function(){
     var section=document.querySelector('.dp-scrollstack-section');
+    var sticky=document.getElementById('dpSSSticky');
     var cards=Array.from(document.querySelectorAll('.dp-ss-card'));
     var N=cards.length;
-    var STEP=0;
-    var rafId=null;
+    var STEP=0,rafId=null;
 
     function setHeight(){
         STEP=window.innerHeight*(window.innerWidth<768?0.32:0.46);
@@ -10905,34 +10913,38 @@
         rafId=null;
         var rect=section.getBoundingClientRect();
         var scrolledIn=-rect.top;
-        if(scrolledIn<-window.innerHeight||scrolledIn>section.offsetHeight)return;
-        var progress=scrolledIn/STEP;
+        var scrollRange=section.offsetHeight-window.innerHeight;
+
+        /* JS-driven sticky: translate panel by scroll amount to pin it */
+        var ty=Math.max(0,Math.min(scrollRange,scrolledIn));
+        sticky.style.transform='translateY('+ty+'px)';
+
+        if(scrolledIn<-window.innerHeight||scrolledIn>scrollRange+window.innerHeight)return;
+
+        var progress=Math.max(0,scrolledIn)/STEP;
 
         cards.forEach(function(card,i){
             var p=Math.max(0,Math.min(1,progress-i));
             var depth=Math.max(0,progress-i-1);
-            var ty,scale,opacity;
+            var tyCard,scale,opacity;
 
             if(p<=0){
-                ty=110; scale=1; opacity=0;
+                tyCard=110;scale=1;opacity=0;
             } else {
                 var arrY=(1-p)*110;
                 var stackY=-Math.min(depth*2.2,13.2);
-                ty=arrY+stackY;
+                tyCard=arrY+stackY;
                 scale=Math.max(0.80,1-depth*0.03);
                 opacity=depth>=7?0:Math.min(1,p*2.5);
             }
 
-            card.style.transform='translate(-50%, calc(-50% + '+ty+'vh)) scale('+scale+')';
+            card.style.transform='translate(-50%,calc(-50% + '+tyCard+'vh)) scale('+scale+')';
             card.style.opacity=opacity;
             card.style.zIndex=i+1;
         });
     }
 
-    function onScroll(){
-        if(rafId)return;
-        rafId=requestAnimationFrame(update);
-    }
+    function onScroll(){if(rafId)return;rafId=requestAnimationFrame(update);}
 
     setHeight();
     window.addEventListener('scroll',onScroll,{passive:true});
