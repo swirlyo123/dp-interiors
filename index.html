@@ -10452,7 +10452,7 @@
     overflow:hidden;
     will-change:transform,opacity;
     box-shadow:0 12px 56px rgba(0,0,0,0.16);
-    transform:translate(-50%,calc(-50% + 110vh));
+    transform:translate(-50%,calc(-50% + 55vh));
     opacity:0;
 }
 .dp-ss-card img {
@@ -10472,7 +10472,7 @@
     letter-spacing:-0.02em;
 }
 @media(max-width:768px){
-    .dp-ss-card { width:92vw; border-radius:14px; }
+    .dp-ss-card { width:92vw; border-radius:14px; aspect-ratio:4/3; }
 }
 </style>
 <div class="dp-ss-panel">
@@ -10516,7 +10516,8 @@
         /* Each card after the first gets its own scroll step.
            First card is visible on entry so we only need N-1 extra steps. */
         STEP=window.innerHeight*(window.innerWidth<768?0.28:0.38);
-        outer.style.height=((N-1)*STEP+window.innerHeight)+'px';
+        var tail=window.innerWidth<768?window.innerHeight*0.1:window.innerHeight;
+        outer.style.height=((N-1)*STEP+tail)+'px';
     }
 
     function update(){
@@ -10534,16 +10535,18 @@
             var depth=Math.max(0,progress-i);
 
             var tyCard,scale,opacity;
+            var entryVh = window.innerWidth < 768 ? 55 : 110;
+            var mobileShift = window.innerWidth < 768 ? -15 : 0;
             if(p<=0){
-                tyCard=110;scale=1;opacity=0;
+                tyCard=entryVh;scale=1;opacity=0;
             } else {
-                var arrY=(1-p)*110;
+                var arrY=(1-p)*entryVh;
                 var stackY=-Math.min(depth*2.4,14.4);
                 tyCard=arrY+stackY;
                 scale=Math.max(0.80,1-depth*0.03);
                 opacity=depth>=7?0:Math.min(1,p*3);
             }
-            card.style.transform='translate(-50%,calc(-50% + '+tyCard+'vh)) scale('+scale+')';
+            card.style.transform='translate(-50%,calc(-50% + '+(tyCard+mobileShift)+'vh)) scale('+scale+')';
             card.style.opacity=opacity;
             card.style.zIndex=i+1;
         });
